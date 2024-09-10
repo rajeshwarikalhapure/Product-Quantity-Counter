@@ -55,7 +55,7 @@ background-color: aliceblue;
         <img class="img1" src="./images/product.png">
         <span class="btn-container">
             <img class="img" id="img1" src="./images/add.png" onclick="count1('inc')">
-            <button class="btn">buy now</button>
+            <button class="btn">Buy now</button>
             <img class="img" id="img2" src="./images/minus.png" onclick="count1('dec')">
         </span>
         <p id="res"> 1 </p>
@@ -63,7 +63,6 @@ background-color: aliceblue;
     </div>
     <script>
         function count1(value) {
-
             const res = document.getElementById('res')
             let resElement = parseInt(res.innerText);
             if (resElement == 5 && value == 'inc') {
