@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <style>
+        body{
+        }
+        .container {
+            height: 450px;
+            width: 300px;
+            border: 2px solid black;
+            margin: auto;
+            border-radius: 3px;
+background-color: aliceblue;
+        }
+
+        .img1 {
+            width: 300px;
+            
+        }
+
+        .img {
+            width: 17px;
+            cursor: pointer;
+
+        }
+
+        .btn {
+            width: 70px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(241, 159, 66);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        #res {
+            margin-left: 50%;
+            font-size: xx-large;
+            
+        }
+    </style>
+    <div class="container">
+        <img class="img1" src="./images/product.png">
+        <span class="btn-container">
+            <img class="img" id="img1" src="./images/add.png" onclick="count1('inc')">
+            <button class="btn">buy now</button>
+            <img class="img" id="img2" src="./images/minus.png" onclick="count1('dec')">
+        </span>
+        <p id="res"> 1 </p>
+
+    </div>
+    <script>
+        function count1(value) {
+
+            const res = document.getElementById('res')
+            let resElement = parseInt(res.innerText);
+            if (resElement == 5 && value == 'inc') {
+                alert('value cannot be grater than 5')
+                return;
+            }
+            else if (resElement == 1 && value == 'dec') {
+                alert('value cannot be less than 1')
+
+                return;
+            }
+            value == 'inc' ? res.innerText = ++resElement : res.innerText = --resElement
+        }
+
+
+
+    </script>
+</body>
+
+</html>
